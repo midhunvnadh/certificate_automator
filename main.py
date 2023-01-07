@@ -1,22 +1,16 @@
 import pandas as pd
 import os
 import cv2
+import json
 from PIL import Image, ImageDraw, ImageFont
 
-"""Settings"""
-fonts_dir = 'fonts'
-font_name = "NotoSans-Black"
-certificate_dir = 'certificate'
-csv_file = "data.csv"
-csv_handle = ["First Name", "Last Name"]
-placement = {
-    "x": 450,
-    "y": 580,
-    "height": 55,
-    "width": 790,
-    "fontSize": 55
-}
-"""Settings End"""
+settings = json.load(open("settings.json"))
+csv_file = settings["csv_file"]
+csv_handle = settings["csv_handle"]
+certificate_dir = settings["certificate_dir"]
+fonts_dir = settings["fonts_dir"]
+font_name = settings["font_name"]
+placement = settings["placement"]
 
 df = pd.read_csv(csv_file, usecols=csv_handle)
 

@@ -1,0 +1,14 @@
+{
+  "fonts_dir": "fonts",
+  "font_name": "NotoSans-Black",
+  "certificate_dir": "certificate",
+  "csv_file": "data.csv",
+  "csv_handle": ["First Name", "Last Name"],
+  "placement": {
+    "x": 450,
+    "y": 580,
+    "height": 55,
+    "width": 790,
+    "fontSize": 55
+  }
+}
